@@ -1,0 +1,41 @@
+<div class="">
+        <h1>Registrarse</h1>
+    <form class="">
+
+        <div class="position-relative form-group">
+            <label for="name" class="">Name</label>
+            <input [(ngModel)]="name" name="name" id="name" placeholder="name" type="name" class="form-control">
+        </div>
+
+        <div class="position-relative form-group">
+            <label for="email" class="">Email</label>
+            <input [(ngModel)]="email" name="email" id="email" placeholder="Email" type="email" class="form-control">
+        </div>
+
+        <div class="position-relative form-group">
+            <label for="password" class="">Password</label>
+            <input [(ngModel)]="password" name="password" id="password" placeholder="password" type="password" class="form-control">
+        </div>
+
+        
+    <div class="position-relative form-group">
+        <label for="picture" class="">Picture</label>
+        <input [(ngModel)]="picture" name="picture" id="picture" placeholder="picture" type="picture" class="form-control">
+        </div>
+
+    <div class="position-relative form-group">
+        <label for="role" class="">Role</label>
+        <div class="form-group">
+            <select class="form-control"[(ngModel)]="role" name="role" id="role"  type="text" >
+              <option value="admin">Administrador</option>
+              <option value="normal">Normal</option>              
+            </select>
+          </div>
+    </div>
+</form>
+
+    <div class="modal-footer">
+        <a href="#/login"><button type="button" class="btn btn-secondary">login</button></a>
+        <button type="button" class="btn btn-primary" (click)="registrar()" >registrarse</button>
+    </div>
+</div>

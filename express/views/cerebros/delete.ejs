@@ -1,0 +1,26 @@
+<% include _header %>
+
+<div class="row container">
+    <div class="col-md-12">
+        <form action="/cerebro/delete/<%= ecerebro.id%>?_method=DELETE" method="post">
+            <div class="form-group">
+                <label for="">Sabor</label>
+                <input type="text" class="form-control" name="flavor" value="<%= ecerebro.flavor %>" disabled>
+            </div>
+            <div class="form-group">
+                <label for="">Descripcion</label>
+                <input type="text" class="form-control" name="descripcion" value="<%= ecerebro.description %>" disabled>
+            </div>
+            <div class="form-group">
+                <label for="">iq</label>
+                <input type="number" class="form-control" name="iq" value="<%= ecerebro.iq %>" disabled>
+            </div>
+            <div class="form-group">
+                <input type="file" accept="image/*" name="picture" value="<%= ecerebro.picture %>" disabled>
+            </div>
+            <button class="btn btn-primary">eliminar zombie</button>
+        </form>
+    </div>
+</div>
+
+<% include _footer %>

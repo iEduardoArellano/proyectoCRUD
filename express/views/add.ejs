@@ -1,0 +1,34 @@
+<% include _header %>
+
+<%
+      if(alert==2){
+           %> 
+           <div class="alert alert-primary" role = "alert">seagrego</div>
+           <%
+      }else if(alert==1){
+          %>
+          <div class="alert alert-danger" role = "alert">NO seagrego porque <%=tError%></div>
+          <%
+      }
+%>
+<div class="row container">
+    <div class="col-md-12">
+        <form action="new" method="post">
+            <div class="form-group">
+                <label for="">nombre</label>
+                <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group">
+                <label for="">email</label>
+                <input type="text" class="form-control" name="email">
+            </div>
+            <div class="form-group">
+                <label for="">tipo</label>
+                <input type="text" class="form-control" name="type">
+            </div>
+            <button class="btn btn-primary">agregar zombie</button>
+        </form>
+    </div>
+</div>
+
+<% include _footer %>

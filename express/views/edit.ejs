@@ -1,0 +1,35 @@
+<% include _header %>
+
+<%
+      if(alert==2){
+           %> 
+           <div class="alert alert-primary" role = "alert">seedito correctamente</div>
+           <%
+      }else if(alert==1){
+          %>
+          <div class="alert alert-danger" role = "alert">NO se logro editar porque <%=tError%></div>
+          <%
+      }
+%>
+
+<div class="row container">
+    <div class="col-md-12">
+        <form action="/zombies/edit/<%= eZombie.id %>?_method=put" method="POST">
+            <div class="form-group">
+                <label for="">nombre</label>
+                <input type="text" class="form-control" name="name" value="<%= eZombie.name %>">
+            </div>
+            <div class="form-group">
+                <label for="">email</label>
+                <input type="text" class="form-control" name="email" value="<%= eZombie.email %>">
+            </div>
+            <div class="form-group">
+                <label for="">tipo</label>
+                <input type="text" class="form-control" name="type" value="<%= eZombie.type %>">
+            </div>
+            <button class="btn btn-primary">editar zombie</button>
+        </form>
+    </div>
+</div>
+
+<% include _footer %>

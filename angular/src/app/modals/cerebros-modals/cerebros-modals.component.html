@@ -1,0 +1,40 @@
+<div class="modal fade" id="modalCerebro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Cerebro</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form class="">
+                    <div class="position-relative form-group">
+                        <label for="nombre" class="">Sabor</label>
+                        <input [(ngModel)]="sabor" name="sabor" id="sabor" placeholder="Sabor" type="text" class="form-control">
+                </div>
+
+                    <div class="position-relative form-group">
+                        <label for="Descripcion" class="">Descripcion</label>
+                        <input [(ngModel)]="descripcion" name="descripcion" id="descripcion" placeholder="Descripcion" type="text" class="form-control">
+                    </div>
+
+                    <div class="position-relative form-group">
+                        <label for="iq" class="">IQ</label>
+                        <input [(ngModel)]="iq" name="iq" id="iq" placeholder="IQ" type="number" class="form-control">
+                    </div>
+                    
+                    <div class="position-relative form-group">
+                        <label for="iq" class="">Foto</label>
+                        <input [(ngModel)]="foto" name="foto" id="foto" placeholder="Foto" type="text" class="form-control">
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)="guardarCerebro()" data-dismiss="modal" >Guardar cambios</button>
+            </div>
+        </div>
+    </div>
+  </div>
